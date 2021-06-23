@@ -38,8 +38,6 @@
 % BOOKLET VERSIONS
 %
 
-% If compilation is done with 'compile.sh', both versions (online and printed) are automatically compiled
-% If compilation is done from editor, choose which version to compile below
 \makeatletter
 \@ifundefined{ifOnline}{% % check if already defined from the command line, if not define \ifOnline
 	\expandafter\newif\csname ifOnline\endcsname
@@ -95,7 +93,8 @@
 	
 	{\large \bfseries #1}
 	
-	{\bfseries \itshape #2,} \textcolor{mygray}{#3} \hfill {#4}
+	{\bfseries \itshape #2,} \\
+    \textcolor{mygray}{#3} \hfill {#4}
 	
     \setcounter{figure}{0}
     \setcounter{equation}{0}
@@ -110,12 +109,17 @@
 {\filbreak %avoid page break
 	
 	{\bfseries \large #1} \\	
-	\tab #2, \textit{#3}
+	{\bfseries \itshape #2} \\
+    \textit{#3}
 	
     \setcounter{figure}{0}
     \setcounter{equation}{0}
+    % This removes the abstract text for posters in the printed version
+    \iffalse
 }
-{}
+{
+    \fi
+}
 \fi % end if
 
 %
