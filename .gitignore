@@ -1,0 +1,11 @@
+*.aux
+*.log
+*.out
+*.toc
+*.gz
+*.pdf
+*.fls
+*.fdb_latexmk
+!cover.pdf
+!images/*.pdf
+!abstracts/figures/*.pdf

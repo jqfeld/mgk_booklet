@@ -1,0 +1,139 @@
+%======================================================
+% This file is part of
+% "AMCOS_booklet"
+% Version 1.1 (04/07/2019)
+% A LaTeX template for conference books of abstracts
+%
+% This template is available at:
+% https://github.com/maximelucas/AMCOS_booklet
+%
+% License: GNU General Public License v3.0
+%
+% Authors:
+% Maxime Lucas (ml.maximelucas@gmail.com)
+% Pau Clusella
+%=======================================================
+
+
+\documentclass[openany, parskip=full, 12pt, a4, DIV=16]{scrbook}
+
+\input{preamble}
+\input{preamble_booklet}
+
+
+	
+\begin{document}
+
+% COVER PAGE
+%--------------------------------------------------------------------
+\includepdf{cover}	% our cover was produced with canva.com
+	
+	
+% BLANK PAGE
+%---------------------------------------------------------------------
+\mbox{}
+\thispagestyle{empty}
+\vfill
+\begin{center}
+    The open-source LaTeX template, MGK\_booklet, used to generate this booklet is available at \url{https://github.com/jqfeld/MGK\_booklet}
+\end{center}
+
+\newpage
+
+% TABLE OF CONTENTS 
+%---------------------------------------------------------------------
+\tableofcontents
+
+% ABOUT
+%---------------------------------------------------------------------
+\chapter{About}
+
+\input{about}
+
+% TIMETABLE 
+%---------------------------------------------------------------------
+\chapter{Timetable}
+\input{timetable.tex}
+CT: Contributed Talk, IS: Invited Speaker
+
+% TALKS 
+%---------------------------------------------------------------------
+\chapter{List of Abstracts -- Talks}
+
+\section{Wednesday, April 21th}
+
+% Session 1: Modeling
+\input{abstracts/t_example_it.tex}
+\input{abstracts/t_example_ct.tex}
+
+
+% Session 2: Micro cavity and DBD Arrays
+\input{abstracts/t_example_it.tex}
+\input{abstracts/t_example_ct.tex}
+
+ 
+
+% Session 3: Plasma in Liquids/ Electrolysis
+\input{abstracts/t_example_it.tex}
+\input{abstracts/t_example_ct.tex}
+
+
+
+
+
+\newpage
+\section{Thursday, April 22nd}
+
+% Session 4 : Plasma Processing and Chemistry
+\input{abstracts/t_example_it.tex}
+\input{abstracts/t_example_ct.tex}
+
+% Session 5 : Plasma-Jets / Rf Discharge Session
+\input{abstracts/t_example_it.tex}
+\input{abstracts/t_example_ct.tex}
+
+% POSTERS
+%------------------------------------------------------------------
+\newpage
+\chapter{List of Posters} 
+
+\vspace{-2.5em}
+
+\section{Wednesday Session}
+\input{abstracts/p_example}
+
+\newpage
+\section{Thursday Session}
+
+\input{abstracts/p_example}
+
+
+
+% LIST OF PARTICIPANTS
+%------------------------------------------------------------------
+% \chapter{List of Participants}
+ 
+% \input{list_of_participants}
+ 
+% USEFUL INFO
+%------------------------------------------------------------------
+\chapter{Useful Information}
+
+\input{useful_info}
+
+% SPONSORS
+%------------------------------------------------------------------
+\chapter{Partner Institutions and Sponsors}
+
+\input{logos}
+
+\newpage
+
+% BACK PAGE
+%-----------------------------------------------------------------
+
+\pagecolor{myblue}
+\thispagestyle{empty}
+\mbox{}
+
+\end{document}
